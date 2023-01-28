@@ -1,4 +1,3 @@
-
 <?php
 ///Linkando com o arquivo de funções
 require_once "functions.php";
@@ -25,7 +24,10 @@ else {
 ///Iniciando a verificação de tipo de usuário logado
 ///De acordo com o usuario o sistema entregará funçoes diferentes
 if (($_SESSION['tipo'])=='su') { ?>
-        <h4>###CODIGO PARA SUPER USUARIO###</h4><br>
+        <hr>
+        <?php echo "DOMÍNIOS CADASTRADOS:<br>";?>
+        <?php echo listar_dominios($connect);?>
+        
 <?php }?>
 
 <?php if (($_SESSION['tipo'])=='ad') { ?>
@@ -36,6 +38,6 @@ if (($_SESSION['tipo'])=='su') { ?>
 
         <h4>###CODIGO PARA USUARIO COMUM###</h4><br>
 <?php } ?>
-
+<hr>
 <!–Link para usuário efetuar logout–>
 <a href="logout.php">Logout</a>
