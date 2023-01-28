@@ -48,5 +48,20 @@ function logout(){
         session_destroy();
         header("location: login.php");
 }
+///Funcao para listar e deletar dominios listados
+function listar_dominios($connect)
+{
 
+	$query = "SELECT domain FROM domains";
+	$resultado = mysqli_query($connect, $query);
+
+	echo "<form method='post' action='deletar_dominio.php'>";
+	while ($row_domains = mysqli_fetch_assoc($resultado)) {
+		$linha = $row_domains['domain'];
+		echo "<input type='checkbox' name='subject[]' id='domains' value='$linha'>
+	<label for='domain'>$linha</label><br>";
+	}
+	echo "<input type='submit' value='EXCLUIR'><br>";
+
+}
 ?>
