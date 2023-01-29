@@ -3,9 +3,13 @@
 ### Tópicos 
 
 :small_blue_diamond: [Configure Postfix](#configure-postfix)
+
 :small_blue_diamond: [Configure Dovecot](#configure-dovecot)
+
 :small_blue_diamond: [Configure Mail Aliases ](#configure-mail-aliases )
+
 :small_blue_diamond: [Testando Postfix ](#testing-postfix  )
+
 
 
 NOTA:
