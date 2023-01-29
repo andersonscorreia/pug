@@ -269,4 +269,12 @@ Issue the command quit to terminate the telnet connection.
 Em seguida, preencha o banco de dados MySQL com domínios e usuários de e-mail.
 
 
+## Documentação
 
+<https://www.linode.com/docs/guides/email-with-postfix-dovecot-and-mysql-on-centos-6/>
+
+<http://docs.slackware.com/howtos:network_services:postfix_dovecot_mysql>
+
+<https://doc.dovecot.org/settings/core/>
+
+<http://www.postfix.org/postconf.5.html>
