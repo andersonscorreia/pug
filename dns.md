@@ -9,21 +9,21 @@ $TTL 30	; tempo de vida das respostas fornecidas pelo DNS
 $ORIGIN pug.d.local.
 @       IN SOA  ns1 root (
                                 20230122	; serial para controle de atualizações entre master e slave
-                                120			; refresh tempo de atualizações entre master e slave
-                                60			; retry tempo de atualizações caso o refresh falhe
-                                300			; expiry tempo de expiração do slave caso não se contate com o master
-								30 )		; minimum tempo de vida das repostas negativas do servidor
+                                120		; refresh tempo de atualizações entre master e slave
+                                60		; retry tempo de atualizações caso o refresh falhe
+                                300		; expiry tempo de expiração do slave caso não se contate com o master
+				30 )		; minimum tempo de vida das repostas negativas do servidor
 
-            IN 	NS   	ns1
-			IN 	A 		192.168.102.157
-			IN 	MX 10	mail
-            IN 	MX 0 	pugmail.d.local.
+        IN NS   	ns1
+	IN A 		192.168.102.157
+	IN MX 10	mail
+        IN MX 0 	pugmail.d.local.
 
-ns1					IN 	A 	192.168.102.157
-mail				IN 	A 	192.168.102.157
-www					IN 	A 	192.168.102.157
-pugmail.d.local.	IN 	A 	192.168.102.157
-web					IN 	CNAME www
+ns1		 IN A 192.168.102.157
+mail		 IN A 192.168.102.157
+www		 IN A 192.168.102.157
+pugmail.d.local. IN A 192.168.102.157
+web		 IN CNAME www
 ```
 
 
@@ -34,18 +34,18 @@ $TTL 30	; tempo de vida das respostas fornecidas pelo DNS
 $ORIGIN pugmail.d.local.
 @       IN SOA  ns1 postmaster (
                                 202311261	; serial para controle de atualizações entre master e slave
-                                120			; refresh tempo de atualizações entre master e slave
-                                60			; retry tempo de atualizações caso o refresh falhe
-                                300			; expiry tempo de expiração do slave caso não se contate com o master
-								30 )		; minimum tempo de vida das repostas negativas do servidor
+                                120		; refresh tempo de atualizações entre master e slave
+                                60		; retry tempo de atualizações caso o refresh falhe
+                                300		; expiry tempo de expiração do slave caso não se contate com o master
+				30 )		; minimum tempo de vida das repostas negativas do servidor
 
-            IN 	NS   	ns1
-			IN 	A 		192.168.102.157
-            IN 	MX 0 	mail
+        IN NS   ns1
+	IN A 	192.168.102.157
+        IN MX 0 mail
 
-ns1					IN 	A 	192.168.102.157
-mail				IN 	A 	192.168.102.157
-www					IN 	A 	192.168.102.157
+ns1	IN A 192.168.102.157
+mail	IN A 192.168.102.157
+www	IN A 192.168.102.157
 ```
 
 ftppug.d.local.zone
@@ -55,15 +55,15 @@ $TTL 10
 $ORIGIN ftppug.d.local.
 @       IN SOA  ns1 hostmaster (
                                 20230122	; serial para controle de atualizações entre master e slave
-                                120			; refresh tempo de atualizações entre master e slave
-                                60			; retry tempo de atualizações caso o refresh falhe
-                                300			; expiry tempo de expiração do slave caso não se contate com o master
-								30 )		; minimum tempo de vida das repostas negativas do servidor
-            IN 	NS   	ns1
-			IN 	A 		192.168.102.157
-            IN 	MX 0 	mail
+                                120		; refresh tempo de atualizações entre master e slave
+                                60		; retry tempo de atualizações caso o refresh falhe
+                                300		; expiry tempo de expiração do slave caso não se contate com o master
+				30 )		; minimum tempo de vida das repostas negativas do servidor
+        IN NS   ns1
+	IN A 	192.168.102.157
+	IN MX 0 mail
 
-ns1		IN A 192.168.102.157
+ns1	IN A 192.168.102.157
 www     IN A 192.168.102.157
 mail    IN A 192.168.102.157
 ftp     IN CNAME www

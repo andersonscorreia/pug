@@ -103,6 +103,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## Licença 
 
-The [MIT License]() (MIT)
+ <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
 
 Copyright :copyright: 2023 - pug.g
