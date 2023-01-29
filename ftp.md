@@ -18,6 +18,7 @@ ativo char(1) NOT NULL DEFAULT 's',
 dir varchar(255) NOT NULL,
 shell varchar(255) NOT NULL,
 email varchar(255) DEFAULT NULL,
+tipo varchar(255) DEFAULT NULL,
 PRIMARY KEY (login),
 KEY login (login),
 KEY uid (uid) );
