@@ -1,9 +1,9 @@
 <?php
 ///Local para inserir os dados para conexao com o banco de dados
 $host = "192.168.102.100";
-$db_user = "container71";
-$db_pass = "1F(995709)";
-$db_name = "ASA71";
+$db_user = "container57";
+$db_pass = "1F(044480)";
+$db_name = "ASA57";
 
 ///Criando uma variavel para conexao com o banco de dados
 $connect = mysqli_connect( $host, $db_user, $db_pass, $db_name );
@@ -35,7 +35,14 @@ function login($connect){
                         header("location: index.php");
                 }
                 else {
-                        echo "Usuário e senha não encontrado";
+                        echo '
+                        <div class="alert alert-danger d-flex align-items-center" role="alert">    
+                          <div>
+                          Email ou senha Invalidos
+    
+                          </div>
+ 
+                        </div>';
                 }
 
         }
@@ -58,10 +65,17 @@ function listar_dominios($connect)
 	echo "<form method='post' action='deletar_dominio.php'>";
 	while ($row_domains = mysqli_fetch_assoc($resultado)) {
 		$linha = $row_domains['domain'];
-		echo "<input type='checkbox' name='subject[]' id='domains' value='$linha'>
+		echo "
+       <tr>         
+        <td><a href='a.php'>$linha</a></td>
+       </tr>";
+
+  /*  
+    <input type='checkbox' name='subject[]' id='domains' value='$linha'>
 	<label for='domain'>$linha</label><br>";
-	}
-	echo "<input type='submit' value='EXCLUIR'><br>";
+	*/
+  }
+	//echo "<input type='submit' value='EXCLUIR'><br>";
 
 }
 ?>
