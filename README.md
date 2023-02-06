@@ -82,14 +82,14 @@ src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg
 
 - [x] a) O sistema comportará um ou mais usuários administradores.
 - [x] b) O(s) usuário(s) administrador(es) deverá(ão) ter sua(s) credencial(is) armazenada(s) em banco de dados, preferencialmente com senha(s) criptografada(s);
-- [ ] c) Uma vez autenticado um usuário administrador, o sistema deverá informar os domínios já configurados, com a opção de removê-los (mediante confirmação);
+- [x] c) Uma vez autenticado um usuário administrador, o sistema deverá informar os domínios já configurados, com a opção de removê-los (mediante confirmação);
 - [ ] d) Também deverá apresentar a opção para criar um novo domínio, desde que não já tenha sido configurado no sistema;
 - [ ] e) Todas as informações sobre domínios e usuários devem ser armazenadas em banco de dados;
 - [ ] f) Uma vez acrescentado ou removido um domínio, deverá ser executado um script (escrito em qualquer linguagem) executado com permissão de "root" para recarregar as configurações do Apache e do BIND;
 - [x] g) Os arquivos de configuração do Apache e do BIND deverão fazer referência a arquivos de inclusão do projeto (httpd.conf.projeto e named.conf.projeto) que serão integralmente regerados a cada acréscimo ou remoção de domínios virtuais;
 - [x] h) Os arquivos de inclusão da configuração do BIND e do Apache deverão estar em diretórios onde o usuário do Apache possua permissão para gerá-los;
 - [ ] i) Após a geração dos arquivos de inclusão, o script de recarga da configuração dos servidores (com permissão de root) deverá ser chamado;
-- [ ] j) Os usuários dos domínios virtuais serão identificados pelos seus endereços de correio;
+- [x] j) Os usuários dos domínios virtuais serão identificados pelos seus endereços de correio;
 - [x] k) Todo domínio virtual, ao ser criado (ex.: domínio.criado), terá o usuário administrador, identificado como "root@domínio.criado", responsável pela sua administração;
 - [ ] l) A senha do administrador do domínio virtual será gerada de forma aleatório pelo sistema;
 - [ ] m) O administrador do domínio virtual acessará o sistema para criar e remover e-mails (usuários) no seu domínio. As senhas dos e-mails serão aleatoriamente geradas pelo sistema e apresentadas ao administrador do domínio virtual;
